@@ -1,0 +1,27 @@
+<div style="text-align: center;">
+    <h3 style="margin-top: 7px;"><b>Data Table for School Profile</b></h3>
+    
+    <table style="border: 2px black;">
+        <tr style="background-color: rgb(52, 199, 239);">
+        <th>Id</th>
+          <th>Institute Name</th>
+          <th>Postal Address</th>
+          <th>District</th>
+          <th>State</th>
+          <th>City</th>
+          <th>Pincode</th>
+          <th><button (click)="add()" class="btn btn-info" ><i class="fa fa-plus"></i></button></th>
+        </tr>
+        
+        <tr *ngFor="let i of data">
+        <td>{{i.id}}</td>
+        <td>{{i.instituteName}}</td>
+        <td>{{i.postal}}</td>
+        <td>{{i.district}}</td>
+        <td>{{i.state}}</td>
+        <td>{{i.city}}</td>
+        <td>{{i.pincode}}</td>
+        <td><button  (click)="viewall(i.id)" class="btn btn-info">View All</button><button (click)="update(i.id)" class="btn btn-info">Update</button> <button (click)="delete(i.id)" class="btn btn-danger">Delete</button></td>
+        </tr>
+      </table>
+</div>
